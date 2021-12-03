@@ -47,8 +47,6 @@ pub fn part1(input: &Vec<&str>) {
 }
 
 pub fn get_oxygen(input: &Vec<&str>, start: u8) {
-    let char_len: u8 = input[0].chars().count() as u8;
-
     let mut current_dataset_oxygen: Vec<&str> = vec![];
 
     let mut count_0: u32 = 0;
@@ -92,8 +90,6 @@ pub fn get_oxygen(input: &Vec<&str>, start: u8) {
 }
 
 pub fn get_co2(input: &Vec<&str>, start: u8) {
-    let char_len: u8 = input[0].chars().count() as u8;
-
     let mut current_dataset_co2: Vec<&str> = vec![];
 
     let mut count_0: u32 = 0;
