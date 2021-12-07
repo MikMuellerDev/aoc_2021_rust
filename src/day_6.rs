@@ -27,11 +27,19 @@ pub fn part1(input: &Vec<u8>) {
 }
 
 pub fn part2(input: &Vec<u8>) {
-    println!(
-        "{}",
-        input
-            .iter()
-            .map(|fish| 256 / (*fish as u64 + 1) +2)
-            .sum::<u64>()
-    )
+    let mut fish_lifecycle: Vec<usize> = vec![0; 9];
+
+    // Add initial values of the fishe's age
+    for index in 0..input.len() {
+        fish_lifecycle[input[index] as usize] += 1;
+    }
+
+    // Actual simulation
+    for _ in 0..256 {
+        let first = fish_lifecycle.remove(0);
+        fish_lifecycle[6] += first;
+        fish_lifecycle.push(first);
+    }
+
+    println!("Part 2: {:?}", fish_lifecycle.iter().sum::<usize>());
 }
