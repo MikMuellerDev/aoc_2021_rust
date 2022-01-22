@@ -16,9 +16,9 @@ fn main() {
     // day_2::run();
     // day_3::run();
     // day_4::run();
-    // day_5::run();
+    day_5::run();
     // day_6::run();
     // day_7::run();
-    day_9::run();
+    // day_9::run();
     println!("\n<------------->\n Execution took {:?}", start.elapsed())
 }
